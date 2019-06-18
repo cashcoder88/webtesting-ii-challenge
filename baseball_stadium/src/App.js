@@ -16,10 +16,6 @@ class App extends Component {
   state = {
     ballCount: 0,
     strikeCount: 0,
-    strike: 0,
-    ball: 0,
-    foul: 0,
-    hit: 0
   }
 
   ballHandler = () => {
@@ -59,17 +55,28 @@ class App extends Component {
     })
   }
 
+  foulHander = () => {
+    if (this.state.strikeCount < 2) {
+      this.setState({
+        strikeCount: this.state.strikeCount + 1
+      })
+    } else {
+      alert(`Fouls Will No Longer Change Strike Count`)
+    }
+  }
+
 
   render() {
     return (
       <div className="App">
-        <h1>Welcome To The Baseball App, By Cash Globe</h1>
+        <h1 className='Welcome'>Welcome To The Baseball App, By Cash Globe</h1>
         <Display state={this.state}/>
         <Dashboard 
           state={this.state} 
           ballHandler={this.ballHandler} 
           strikeHandler={this.strikeHandler} 
           hitHandler={this.hitHandler}
+          foulHandler={this.foulHander}
         />
       </div>
     );

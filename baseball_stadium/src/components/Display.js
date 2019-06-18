@@ -11,7 +11,7 @@ class Display extends Component {
     }
     render() {
       return (
-        <div>
+        <div className='display-title'>
           <h1>Display</h1>
           <h5>Display will show the count of "balls" and "strikes"</h5>
           <h2>Ball Count: {this.props.state.ballCount}</h2>
