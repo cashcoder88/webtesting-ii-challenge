@@ -23,10 +23,10 @@ class Dashboard extends Component {
         <div>
           <h1 className="dashboard-title">Baseball Dashboard</h1>
           <div className='button-div'>
-            <button onClick={this.props.strikeHandler}>Strike</button>
-            <button onClick={this.props.ballHandler}>Ball</button>
-            <button onClick={this.props.foulHandler}>Foul</button>
-            <button onClick={this.props.hitHandler}>Hit</button>
+            <button onClick={this.props.strikeHandler}>Strike!</button>
+            <button onClick={this.props.ballHandler}>Ball!</button>
+            <button onClick={this.props.foulHandler}>Foul!</button>
+            <button onClick={this.props.hitHandler}>Hit!</button>
           </div>
         </div>
       );
